@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import ToDoItem from './components/ToDoItem';
-import ToDoInputBox from './components/ToDoInputBox';
+import ToDoView from './views/ToDoView'
 
 function App() {
-  const [toDoText, setToDoText] = useState('Create To Do List App')
   return (
     <div className="App">
       <div className="todo-wrapper" >
         <h1>To Do List App</h1>
-        <ToDoItem toDoText={toDoText}/>
-        <ToDoInputBox />
+        <ToDoView />
       </div>
     </div>
   );
