@@ -16,7 +16,7 @@ function ToDoView () {
 
     const addTodo = (todoText) => {
         let todos = toDoItem.todos.slice();
-        todos.push({id: toDoItem.nextId, text:toDoItem.todos.text});
+        todos.push({id: toDoItem.nextId, text:todoText});
         setToDoItem({
             todos: todos,
             nextId: ++toDoItem.nextId
