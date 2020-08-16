@@ -22,12 +22,17 @@ function ToDoView () {
             nextId: ++toDoItem.nextId
             });
     }
+    const removeTodo = (id) => {
+        setToDoItem({
+            todos: toDoItem.todos.filter((todo, index) => todo.id !== id)
+          });
+      }
     return (
         <div>
             <ul>
                 {
                 toDoItem.todos.map((toDo) => 
-                    <ToDoItem  key ={toDo.id} {...toDo}/>
+                    <ToDoItem  key ={toDo.id} {...toDo} removeTodo={removeTodo}/>
                 )
                 }
             </ul>
