@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/css/todoitem.css'
 
-export default ({id, text}) => {
+export default ({text}) => {
     return(
         <div className="todoWrapper">
             <button className="removeTodo" onClick={""}>remove</button>
