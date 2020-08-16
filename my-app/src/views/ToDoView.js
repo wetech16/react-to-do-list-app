@@ -10,7 +10,9 @@ function ToDoView () {
       ]
     
     const [toDoText, setToDoText] = useState(toDoItems)
-
+    const handleChange = (todo) => {
+        setToDoText(todo);
+    }
     return (
         <div>
             <ul>
@@ -20,7 +22,7 @@ function ToDoView () {
                 )
                 }
             </ul>
-                <ToDoInputBox />
+                <ToDoInputBox handleChange={handleChange}/>
         </div>
     );
 }
